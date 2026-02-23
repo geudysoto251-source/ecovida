@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVida - Cuidemos Nuestro Planeta</title>
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        :root {
+            --primary-color: #2E7D32; /* Verde Oscuro */
+            --secondary-color: #4CAF50; /* Verde Claro */
+            --accent-color: #FFC107; /* Amarillo */
+            --text-color: #333;
+            --bg-light: #f4f9f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- HEADER / NAVEGACIÓN --- */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+            transition: 0.3s;
+        }
+
+        /* --- HERO SECTION (Portada) --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        /* --- SECCIONES --- */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        /* Problemas */
+        .problemas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 1rem 0;
+            color: var(--primary-color);
+        }
+
+        /* Soluciones / Consejos */
+        .soluciones {
+            background-color: var(--bg-light);
+        }
+
+        .consejos-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .consejo {
+            background: white;
+            padding: 2rem;
+            border-left: 5px solid var(--secondary-color);
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .consejo h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Ocultar menú en móvil para simplificar */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">🌿 EcoVida</div>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#problemas">Problemas</a></li>
+                    <li><a href="#soluciones">Soluciones</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Protejamos Nuestro Hogar</h1>
+            <p>El medio ambiente nos necesita. Cada pequeña acción suma para un futuro mejor.</p>
+            <a href="#soluciones" class="btn">Únete al Cambio</a>
+        </div>
+    </section>
+
+    <!-- Problemas Ambientales -->
+    <section id="problemas">
+        <div class="container">
+            <h2 class="section-title">Principales Problemas</h2>
+            <div class="problemas-grid">
+                <!-- Tarjeta 1 -->
+                <div class="card">
+                    <!-- Placeholder de imagen -->
+                    <img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Contaminación">
+                    <h3>Contaminación</h3>
+                    <p>Los residuos plásticos y las emisiones industriales están afectando la salud de nuestro planeta.</p>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1448375240586-dfd8d395ea6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Deforestación">
+                    <h3>Deforestación</h3>
+                    <p>La pérdida de bosques limita la biodiversidad y contribuye al cambio climático.</p>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1569163139599-0f4517e36b31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Cambio Climático">
+                    <h3>Cambio Climático</h3>
+                    <p>El aumento de temperatura global causa eventos climáticos extremos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soluciones y Consejos -->
+    <section id="soluciones" class="soluciones">
+        <div class="container">
+            <h2 class="section-title">¿Qué podemos hacer?</h2>
+            <div class="consejos-list">
+                <div class="consejo">
+                    <h3>♻️ Reciclar</h3>
+                    <p>Separa tus residuos. El plástico tarda siglos en degradarse, recíclalo para darle una nueva vida.</p>
+                </div>
+                <div class="consejo">
+                    <h3>💧 Ahorrar Agua</h3>
+                    <p>Cierra el grifo mientras te lavas los dientes. El agua es un recurso limitado.</p>
+                </div>
+                <div class="consejo">
+                    <h3>🚲 Transport Verde</h3>
+                    <p>Usa la bicicleta o el transporte público. Reduce tu huella de carbono.</p>
+                </div>
+                <div class="consejo">
+                    <h3>🔌 Ahorrar Energía</h3>
+                    <p>Apaga las luces y desenchufa los aparatos que no uses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <p>&copy; 2023 EcoVida. Cuidemos el planeta juntos.</p>
+            <p>Síguenos en redes sociales | Contacto: hola@ecovidagreen.com</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
